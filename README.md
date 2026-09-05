@@ -158,15 +158,7 @@ MediaPipe Hands
 
 Librosa
 
-Pydub
-
-SciPy
-
-SoundFile
-
 NumPy
-
-FFmpeg
 
 SQLite
 
