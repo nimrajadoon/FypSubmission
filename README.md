@@ -39,36 +39,48 @@ Detect objects/fruits using the camera
 Detect and count multiple objects
 
 🧠 How It Works
+                       ## 🏗️ System Architecture
+
+```text
                          DIGITIFY LEARN
-                              │
-                    ┌─────────┴─────────┐
-                    │  React Native +   │
-                    │       Expo        │
-                    └─────────┬─────────┘
-                              │
-          ┌───────────────────┼───────────────────┐
-          │                   │                   │
-      ✍️ Canvas            🎙️ Voice            📷 Camera
-          │                   │                   │
-     Digit Input          Audio Input            │
-                              │             ┌─────┴─────┐
-                              │             │           │
-                              │          ✋ Fingers  🍎 Objects
-                              │             │           │
-                              └─────────────┴───────────┘
-                                            │
-                                  ┌─────────▼─────────┐
-                                  │  Django REST API  │
-                                  └─────────┬─────────┘
-                                            │
-                                  ┌─────────▼─────────┐
-                                  │   AI / ML / CV    │
-                                  │     Processing    │
-                                  └─────────┬─────────┘
-                                            │
-                                  ┌─────────▼─────────┐
-                                  │ Result + Feedback │
-                                  └───────────────────┘
+                              |
+                     +--------+--------+
+                     | React Native +  |
+                     |      Expo       |
+                     +--------+--------+
+                              |
+          +-------------------+-------------------+
+          |                   |                   |
+          v                   v                   v
+     +---------+         +---------+         +---------+
+     | Canvas  |         |  Voice  |         | Camera  |
+     +----+----+         +----+----+         +----+----+
+          |                   |                   |
+          v                   v             +-----+-----+
+   +-------------+     +-------------+      |           |
+   | Digit Input |     | Audio Input |      v           v
+   +-------------+     +-------------+  +--------+  +---------+
+                                          |Fingers |  | Objects |
+                                          +----+---+  +----+----+
+                                               |           |
+                                               +-----+-----+
+                                                     |
+                                                     v
+                                          +-------------------+
+                                          | Django REST API   |
+                                          +---------+---------+
+                                                    |
+                                                    v
+                                          +-------------------+
+                                          | AI / ML / CV      |
+                                          |    Processing      |
+                                          +---------+---------+
+                                                    |
+                                                    v
+                                          +-------------------+
+                                          | Result + Feedback |
+                                          +-------------------+
+```
 📱 Frontend
 
 Built with React Native + Expo.
