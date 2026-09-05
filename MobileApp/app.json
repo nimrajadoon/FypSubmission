@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Digitify",
+    "slug": "digitify-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#667eea"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses the camera for finger counting detection.",
+        "NSMicrophoneUsageDescription": "This app uses the microphone to record voice for digit recognition."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#667eea"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Digitify to access your camera for finger counting."
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow Digitify to access your microphone for voice recognition."
+        }
+      ]
+    ]
+  }
+}
