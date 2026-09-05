@@ -235,67 +235,95 @@ python manage.py runserver 0.0.0.0:8000
 
 🤖 AI & Recognition
 
-🎙️ Voice Recognition
+## 🎙️ Voice Recognition
 
-Audio
-  ↓
+```text
+Audio Input
+    |
+    v
 Preprocessing
-  ↓
-MFCC Features
-  ↓
+    |
+    v
+MFCC Feature Extraction
+    |
+    v
 CNN Model
-  ↓
+    |
+    v
 Digit Prediction
-  ↓
+    |
+    v
 Confidence + Result
+```
 
-The system recognizes spoken digits from 0–9.
+> Recognizes spoken digits from **0–9** using audio processing and a CNN-based model.
 
-✋ Finger Counting
 
+## ✋ Finger Counting
+
+```text
 Camera Image
-     ↓
+    |
+    v
 MediaPipe Hands
-     ↓
+    |
+    v
 Hand Landmarks
-     ↓
+    |
+    v
 Raised Finger Analysis
-     ↓
+    |
+    v
 Finger Count
+```
 
-✍️ Digit Recognition
+> Detects and counts raised fingers using **MediaPipe Hands**.
 
+
+## ✍️ Digit Recognition
+
+```text
 Drawing / Camera Image
-        ↓
-Preprocessing
-        ↓
+        |
+        v
+Image Preprocessing
+        |
+        v
 Digit Recognition
-        ↓
+        |
+        v
 Predicted Digit
-        ↓
+        |
+        v
 Confidence
+```
 
-🍎 Object Detection & Counting
+> Recognizes handwritten or scanned **single digits (0–9)** and provides a confidence score.
 
-Camera
-  ↓
+
+## 🍎 Object Detection & Counting
+
+```text
+Camera Input
+    |
+    v
 Object Detection
-  ↓
+    |
+    v
 Object Identification
-  ↓
+    |
+    v
 Object Counting
-  ↓
+    |
+    v
 Learning Feedback
+```
+
+> Detects and counts objects to create an interactive learning experience.
 
 The current project documentation focuses the object-learning activity on fruit detection and counting.
 
 🔌 API
-
-Health Check
-
-GET
-
-/api/health/
 
 Voice Prediction
 
@@ -359,8 +387,6 @@ Camera digit scanning
 Object detection
 
 Object counting
-
-Invalid input handling
 
 Navigation
 
