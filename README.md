@@ -39,29 +39,36 @@ Detect objects/fruits using the camera
 Detect and count multiple objects
 
 🧠 How It Works
-
-                    DIGITIFY LEARN
-                          │
-              ┌───────────┴───────────┐
-              │   React Native + Expo │
-              └───────────┬───────────┘
-                          │
-        ┌─────────────────┼─────────────────┐
-        │                 │                 │
-     ✍️ Canvas          🎙️ Voice          📷 Camera
-        │                 │                 │
-   Digit Input       Audio Input      ┌─────┴─────┐
-                                      │           │
-                                   ✋ Fingers   🍎 Objects
-                                      │           │
-                                      └─────┬─────┘
+                         DIGITIFY LEARN
+                              │
+                    ┌─────────┴─────────┐
+                    │  React Native +   │
+                    │       Expo        │
+                    └─────────┬─────────┘
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+      ✍️ Canvas            🎙️ Voice            📷 Camera
+          │                   │                   │
+     Digit Input          Audio Input            │
+                              │             ┌─────┴─────┐
+                              │             │           │
+                              │          ✋ Fingers  🍎 Objects
+                              │             │           │
+                              └─────────────┴───────────┘
                                             │
-                                   Django REST API
+                                  ┌─────────▼─────────┐
+                                  │  Django REST API  │
+                                  └─────────┬─────────┘
                                             │
-                                AI / ML / Computer Vision
+                                  ┌─────────▼─────────┐
+                                  │   AI / ML / CV    │
+                                  │     Processing    │
+                                  └─────────┬─────────┘
                                             │
-                                      Result + Feedback
-
+                                  ┌─────────▼─────────┐
+                                  │ Result + Feedback │
+                                  └───────────────────┘
 📱 Frontend
 
 Built with React Native + Expo.
@@ -92,18 +99,25 @@ Vector Icons
 
 📂 Frontend Structure
 
+## 📁 Frontend Structure
+
+```text
 Frontend/
-├── App.js
-├── package.json
-├── app.json
-├── babel.config.js
+├── 📄 App.js
+├── 📄 package.json
+├── 📄 app.json
+├── 📄 babel.config.js
 │
-└── src/
-    ├── config/
-    │   └── api.js
-    ├── screens/
-    ├── components/
-    └── assets/
+└── 📂 src/
+    ├── 📂 config/
+    │   └── 📄 api.js
+    │
+    ├── 📂 screens/
+    │
+    ├── 📂 components/
+    │
+    └── 📂 assets/
+```
 
 🚀 Frontend Installation
 
@@ -164,6 +178,9 @@ SQLite
 
 📂 Backend Structure
 
+## 📁 Backend Structure
+
+```text
 Backend/
 ├── manage.py
 ├── requirements.txt
@@ -180,6 +197,7 @@ Backend/
 │
 ├── models/
 └── media/
+```
 
 🚀 Backend Installation
 
