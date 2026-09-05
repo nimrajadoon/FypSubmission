@@ -1,0 +1,24 @@
+# Digitify Backend - Requirements
+# Python 3.12 recommended (for MediaPipe compatibility)
+
+# Django Framework
+Django>=4.2
+django-cors-headers>=4.3.0
+
+# Machine Learning
+tensorflow>=2.15.0
+keras>=3.0.0
+
+# Audio Processing
+librosa>=0.10.0
+pydub>=0.25.1
+scipy>=1.11.0
+soundfile>=0.12.1
+
+# Computer Vision
+opencv-python>=4.8.0
+mediapipe>=0.10.0
+
+# Utilities
+numpy>=1.24.0
+h5py>=3.10.0
